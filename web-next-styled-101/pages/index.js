@@ -1,30 +1,36 @@
+//regular imports
+import React, { useState } from "react";
 import Head from "next/head";
-import styled from "styled-components";
-
-const HeaderFlex = styled.div`
-  height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #fff;
-`;
-
-const Heading = styled.h1`
-  color: #000;
-  font-size: 10rem;
-  font-weight: 900;
-`;
+//import tyles
+import { HeaderFlex, Heading } from "../styles/HomePage.styles.js";
+import {
+  SubmitFormButton,
+  BtnContainer,
+} from "../styles/SubmitButton.styles.js";
 
 export default function Home() {
+  const [BtnColor, setBtnColor] = useState(0);
+
   return (
     <>
       <Head>
         <title>Home</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <HeaderFlex>
-        <Heading>NEXT</Heading>
+        <Heading changeTextColor={BtnColor}>NEXT</Heading>
       </HeaderFlex>
+
+      <BtnContainer>
+        <p>Material-UI + Styled-Components:</p>
+        <SubmitFormButton
+          onClick={() => (BtnColor ? setBtnColor(0) : setBtnColor(1))}
+          active={BtnColor}
+        >
+          {BtnColor ? "Clicked" : "Click Me"}
+        </SubmitFormButton>
+      </BtnContainer>
     </>
   );
 }

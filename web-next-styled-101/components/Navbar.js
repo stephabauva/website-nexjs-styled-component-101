@@ -1,18 +1,5 @@
-import styled from "styled-components";
+import { Nav, StyledLink } from "../styles/Navbar.styles.js";
 import Link from "next/Link";
-
-const Nav = styled.nav`
-  height: 80px;
-  background: #1a0aa8;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-const StyledLink = styled.a`
-  padding: 0rem 2rem;
-`;
 
 const Navbar = () => {
   return (
