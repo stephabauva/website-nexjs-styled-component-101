@@ -30,3 +30,7 @@ npm install --save babel-plugin-styled-components
 - paste it in your .babelrc file
 
 Since we use styled-components, we don't need the jsx style, you can delete the style import and the <div className={styles.container}> tag from index.js, as well as the Home.module.css file from the styles/ folder.
+
+Original author:
+briancodex
+full video: https://www.youtube.com/watch?v=LyEc2fGCR90
