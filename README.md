@@ -1,5 +1,12 @@
-Really simple, basic layout of a responsive website with navbar, footer, about and contact page.
-There are also a button on the homepage. It combines Material-UI and Styled-Components, it changes color as well as the "NEXT" text color.
+ <p align="center">
+  <img height="350" src="https://github.com/stephanBV/website-nexjs-styled-component-101/blob/master/web-next-styled-101/thumbnail.png"/>
+</p>
+
+Really simple, basic layout of a responsive website with navbar, footer, about and contact page.  
+There are also a button ▶️ on the homepage .  
+It combines Material-UI and Styled-Components, it changes color as well as the "NEXT" text color.
+
+---
 
 Material-UI allows for faster and easier stylized web development.
 Styled-Components makes your code more readable, understandable and offer useful tools like:
@@ -9,13 +16,15 @@ Styled-Components makes your code more readable, understandable and offer useful
 - theming
   So what about we mix those two, ay! 👨‍🎨
 
-As I am going to repeat Material-UI and styled-components a lot:
-MU = Material-UI
-SC = styled-components
+---
+
+As I am going to repeat Material-UI and styled-components a lot:  
+MU = Material-UI <br />
+SC = Styled-Components <br />
 
 ## setup part 1: create app, install SC and MU:
 
-The doc for more details 👉 https://nextjs.org/learn/basics/create-nextjs-app/setup
+_The doc for more details 👉 https://nextjs.org/learn/basics/create-nextjs-app/setup_
 
 ```
 npx create-next-app web-next-styled-101
@@ -25,7 +34,7 @@ npm install @material-ui/core
 
 ## Setup part 2: to use styled-components with Next.js:
 
-(from https://github.com/vercel/next.js/tree/canary/examples/with-styled-components)
+_from https://github.com/vercel/next.js/tree/canary/examples/with-styled-components_
 
 ```
 npm install --save babel-plugin-styled-components
@@ -34,24 +43,24 @@ npm install --save babel-plugin-styled-components
 - add a \_document.js file into your pages/ folder
   If you just want to use SC or just MU:
 - for SC, you need that document: https://github.com/vercel/next.js/blob/canary/examples/with-styled-components/pages/_document.js
-  and for MU, you need that document: https://github.com/mui-org/material-ui/blob/master/examples/nextjs/pages/_document.js .
+  and for MU, you need that document: https://github.com/mui-org/material-ui/blob/master/examples/nextjs/pages/_document.js .  
   But we want to use **BOTH** SC and MU so thanks to stackoverflow, by making a little adjustment we can merge the two: https://github.com/stephanBV/website-nexjs-styled-component-101/blob/master/web-next-styled-101/pages/_documents.js
 - paste it in your \_documents.js file
 - at the root directory, adda a .babelrc file
 - copy the content of https://github.com/vercel/next.js/blob/canary/examples/with-styled-components/.babelrc
 - paste it in your .babelrc file
 
-Since we use SC, we don't need the jsx style, you can delete the style import and the <div className={styles.container}> tag from index.js, as well as the Home.module.css file from the styles/ folder.
+Since we use SC, we don't need the jsx style, you can delete the style import and the `<div className={styles.container}>` tag from index.js, as well as the Home.module.css file from the styles/ folder.
 
 ## Problem! -> Interoperability, the trick? - Controlling the priority 👮‍♀️
 
-To be able to "overwrite" MU styling with our SC', we have two options:
-1- we can change the CSS injection order
-2- we can "use the && characters in SC to bump up specificity by repeating the class name"; which is what we are going to use here.
-Hence, we add the '&&' characters to the SubmitFormButton component in SubmitButton.styles.js .
-If you want to read more about it:
-MU interoperability with SC: https://material-ui.com/guides/interoperability/#styled-components
-How to use the '&&' characters: https://styled-components.com/docs/basics
+To be able to "overwrite" MU styling with our SC', we have two options:  
+1- we can change the CSS injection order <rb />
+2- we can "use the && characters in SC to bump up specificity by repeating the class name"; which is what we are going to use here <br />
+Hence, we add the '&&' characters to the SubmitFormButton component in SubmitButton.styles.js <br />
+If you want to read more about it: <br />
+MU interoperability with SC: https://material-ui.com/guides/interoperability/#styled-components <br />
+How to use the '&&' characters: https://styled-components.com/docs/basics <br />
 
 ## The Flow
 
