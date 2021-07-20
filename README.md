@@ -77,9 +77,9 @@ npm run dev
 ```
 
 Articles related:
-Styled Components vs CSS / SASS / CSS-In-JSX article: https://binyamin.medium.com/styled-components-vs-css-sass-css-in-jsx-c3c9268e8945
-styled-components + Material-UI guide: https://material-ui.com/guides/interoperability/#styled-components
-Class Components vs Functional Components in React: https://dev.to/mehmehmehlol/class-components-vs-functional-components-in-react-4hd3
+Styled Components vs CSS / SASS / CSS-In-JSX article: https://binyamin.medium.com/styled-components-vs-css-sass-css-in-jsx-c3c9268e8945 <br />
+styled-components + Material-UI guide: https://material-ui.com/guides/interoperability/#styled-components <br />
+Class Components vs Functional Components in React: https://dev.to/mehmehmehlol/class-components-vs-functional-components-in-react-4hd3 <br />
 
 Original website author: Next.js + styled-components
 briancodex
